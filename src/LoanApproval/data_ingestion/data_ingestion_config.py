@@ -13,10 +13,11 @@ class DataIngestionConfigurationManager:
 
     def data_ingestion_config(self):
         config = self.config['data_ingestion']
-        create_directories([config['root_dir']])
+        config_root_dir = Path(config['root_dir'])
+        create_directories([config_root_dir])
 
         data_ingestion_config = {"root_dir": Path(config['root_dir']), "source_url": config['source_url'], 
                                  "local_files": Path(config['local_files']), 'url_path':config['url_path']}
 
-        return data_ingestion_config
+        return data_ingestion_config 
     
