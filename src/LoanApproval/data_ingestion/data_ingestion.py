@@ -25,4 +25,4 @@ class DataIngestion:
         self.df.to_csv(raw_local_file_path, index=False)
         log.info(f"data saved successfully at {raw_local_file_path}")
 
-        log.info(f">>>>>>>>>>>>>>>>> {STAGE_NAME} compleated successfully compleated")
+        log.info(f">>>>>>>>>>>>>>>>> {STAGE_NAME} compleated successfully compleated\n")
