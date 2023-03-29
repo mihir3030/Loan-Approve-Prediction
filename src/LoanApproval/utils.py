@@ -2,7 +2,7 @@ import os
 from pathlib import Path
 import yaml
 from LoanApproval import log
-
+import json
 
 
 def read_yam_file(path_to_yaml: Path):
@@ -19,3 +19,9 @@ def create_directories(path_to_directories: list, verbose=True):
         os.makedirs(path, exist_ok=True)
         if verbose:
             log.info(f"created directory at {path}")
+
+
+def save_reports(report: dict, report_path: str, indentation=4):
+    with open(report_path, "w") as f:
+        json.dump(report, f, indent=indentation)
+    log.info("reports are saved")
