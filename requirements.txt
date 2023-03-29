@@ -12,5 +12,6 @@ dataclasses
 requests
 imblearn
 jupyterlab
+mlflow
 
 -e .
