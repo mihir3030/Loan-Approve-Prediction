@@ -14,3 +14,4 @@ training:
   root_dir: artifacts/training
   test_data: test.csv
   local_model_file: model.pkl
+  score_save: score.json
